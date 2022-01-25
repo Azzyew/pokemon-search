@@ -24,7 +24,7 @@ function App() {
         }
     }
 
-    const handleGetById = async() => {
+    const handleFetchById = async() => {
         try{
             const data = await PokemonServices.fetchById(id);
             setPokemon(data);
@@ -33,7 +33,7 @@ function App() {
         }
     }
 
-    const handleGetByName = async() => {
+    const handleFetchByName = async() => {
         try{
             const data = await PokemonServices.fetchByName(name);
             setPokemon(data);
@@ -49,7 +49,6 @@ function App() {
 
     const Pokemons = () => pokemonList.slice(minValue, maxValue).map(poke => (
         <PokemonCard name={poke.name} />
-        
     ));
 
     useEffect(() => {
@@ -59,10 +58,10 @@ function App() {
   return (
     <div className="App">
         <input type='number' value={id} onChange={e => setId(e.target.value)} />
-        <button type='submit' onClick={handleGetById}>Search by ID</button>
+        <button type='submit' onClick={handleFetchById}>Search by ID</button>
 
         <input type='text' value={name} onChange={e => setName(e.target.value)} />
-        <button type='submit' onClick={handleGetByName}>Search by name</button>
+        <button type='submit' onClick={handleFetchByName}>Search by name</button>
 
         <div className='container'>
         
