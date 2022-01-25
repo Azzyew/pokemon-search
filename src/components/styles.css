@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  border: 1px #333 solid;
+  border-radius: 5%;
+  margin: 5px;
+  background-color: white;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #333;
+}

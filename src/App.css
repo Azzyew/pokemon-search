@@ -1,38 +1,41 @@
+@import "~antd/dist/antd.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  margin-top: 2%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #dbdada;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  padding: 2px;
+  border-radius: 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  margin-left: 2px;
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.pokemon-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 2% 5%;
+}
+
+.pokemon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  padding-bottom: 2%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
